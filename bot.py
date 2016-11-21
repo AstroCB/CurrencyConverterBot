@@ -51,31 +51,15 @@ def parse(message):
         return get_message(conversions)
     return None
 
-class Comment:
-    def __init__(self, body):
-        self.author = "AstroCB"
-        self.submission = self.Submission()
-        self.body = body
-    class Submission:
-        def __init__(self):
-            self.subreddit = "all"
-
-comments = [
-    Comment("/u/ConvertCurrency 100 USD to EUR"),
-    Comment("u/ConvertCurrency 100 USD EUR"),
-    Comment("/u/ConvertCurrency 300.50 EUR to AUD"),
-    Comment("u/ConvertCurrency 123 CAD to EUR")
-]
-
 def main():
     r = praw.Reddit(USERAGENT)
     r.login(USERNAME, PASSWORD, disable_warning=True)
-    for comment in comments:#praw.helpers.comment_stream(r, 'all'):
+    for comment in praw.helpers.comment_stream(r, 'all'):
         resp = parse(comment)
         if resp and not (str(comment.author) in BLACKLISTED_USERS or str(comment.submission.subreddit) in BLACKLISTED_SUBS):
             try:
                 print(resp)
-                # comment.reply(resp)
+                comment.reply(resp)
             except praw.errors.RateLimitExceeded as error:
                 # Rate limit error
                 print("Sleeping for {} seconds".format(error.sleep_time))
