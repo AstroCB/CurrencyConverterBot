@@ -28,7 +28,7 @@ If you'd like to fork/clone this bot, there are a few things you'll have to set 
 pip install currencyconverter
 ```
 
-Next, you'll need a configuration file with the necessary data required for accessing read/write features of the API.
+Next, you'll need a configuration file with the requisite data for accessing read/write features of the API.
 
 You can create a Reddit account for your bot, or simply use your existing account. Once you have the username/password for the account you'd like the bot to post under, create a file in the root directory called `credentials.py`.
 
