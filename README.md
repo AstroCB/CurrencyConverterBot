@@ -22,7 +22,7 @@ Acceptable currency formats can be found [here](https://pypi.python.org/pypi/Cur
 
 ## Configuration
 
-If you'd like to fork/clone this bot, there are a few things you'll have to set up. First of all, it depends on the [CurrencyConverter Python package](https://pypi.python.org/pypi/CurrencyConverter/0.5), which can be installed easily with pip (but make sure it is installed as a Python 3 package):
+If you'd like to fork/clone this bot, there are a few things you'll have to set up. First of all, it depends on the [CurrencyConverter Python package](https://pypi.python.org/pypi/CurrencyConverter/0.5), which can be installed easily with pip (but make sure it is installed under Python 3):
 
 ```
 pip install currencyconverter
