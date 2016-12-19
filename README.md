@@ -22,9 +22,11 @@ Acceptable currency formats can be found [here](https://pypi.python.org/pypi/Cur
 
 ## Configuration
 
-If you'd like to fork/clone this bot, you'll have to set up a configuration file with the necessary data required for accessing read/write features of the API.
+If you'd like to fork/clone this bot, there are a few things you'll have to set up. First of all, it depends on the [CurrencyConverter Python package](https://pypi.python.org/pypi/CurrencyConverter/0.5), which can be downloaded directly from their website or with pip.
 
-You'll need to create a Reddit account for your bot (or simply use your existing account). Once you have the username/password for the account you'd like the bot to post under, create a file in the root directory called `credentials.py`.
+Next, you'll need a configuration file with the necessary data required for accessing read/write features of the API.
+
+You can create a Reddit account for your bot, or simply use your existing account. Once you have the username/password for the account you'd like the bot to post under, create a file in the root directory called `credentials.py`.
 
 It should contain 3 variables: `USERNAME`, `PASSWORD`, and `USERAGENT`, an identifier required to access the Reddit API. This can be anything you like, but make sure it's unique. It's also a good idea to include a version in the user agent so that it can be easily changed if it gets blocked for some reason (not that you would spam the Reddit API or anything...).
 
